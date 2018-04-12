@@ -7,8 +7,8 @@ import com.burak.discount.model.builder.ProductCampaignFactory;
 import com.burak.discount.model.campaign.CampaignData;
 import com.burak.discount.model.campaign.ProductCampaignData;
 import com.burak.discount.repository.ProductCampaignRepository;
+import com.burak.discount.service.campaign.ProductCampaignService;
 import com.burak.discount.util.InputValidator;
-import com.sun.tools.doclets.internal.toolkit.util.DocFinder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -17,10 +17,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.Optional;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.*;
 
 /**
  * Created by byoruk on 12.04.2018.

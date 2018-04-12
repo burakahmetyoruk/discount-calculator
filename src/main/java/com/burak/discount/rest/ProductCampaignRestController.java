@@ -3,7 +3,7 @@ package com.burak.discount.rest;
 import com.burak.discount.entity.Campaign;
 import com.burak.discount.exception.InputValidationException;
 import com.burak.discount.model.campaign.ProductCampaignData;
-import com.burak.discount.service.ProductCampaignService;
+import com.burak.discount.service.campaign.ProductCampaignService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

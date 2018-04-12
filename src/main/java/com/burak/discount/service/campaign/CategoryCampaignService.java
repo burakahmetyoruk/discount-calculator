@@ -1,16 +1,12 @@
-package com.burak.discount.service;
+package com.burak.discount.service.campaign;
 
 import com.burak.discount.entity.Campaign;
 import com.burak.discount.entity.CategoryCampaign;
-import com.burak.discount.entity.ProductCampaign;
 import com.burak.discount.exception.InputValidationException;
 import com.burak.discount.model.builder.CategoryCampaignFactory;
-import com.burak.discount.model.builder.ProductCampaignFactory;
 import com.burak.discount.model.campaign.CampaignData;
 import com.burak.discount.repository.CategoryCampaignRepository;
-import com.burak.discount.repository.ProductCampaignRepository;
 import com.burak.discount.util.InputValidator;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

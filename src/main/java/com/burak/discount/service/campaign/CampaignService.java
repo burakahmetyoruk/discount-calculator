@@ -1,4 +1,4 @@
-package com.burak.discount.service;
+package com.burak.discount.service.campaign;
 
 import com.burak.discount.exception.InputValidationException;
 import com.burak.discount.model.campaign.CampaignData;

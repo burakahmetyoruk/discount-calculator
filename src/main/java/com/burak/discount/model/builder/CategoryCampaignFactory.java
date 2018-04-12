@@ -1,9 +1,7 @@
 package com.burak.discount.model.builder;
 
-import com.burak.discount.entity.Campaign;
 import com.burak.discount.entity.CategoryCampaign;
 import com.burak.discount.model.campaign.CampaignData;
-import com.burak.discount.model.campaign.CategoryCampaignData;
 import org.springframework.stereotype.Component;
 
 /**

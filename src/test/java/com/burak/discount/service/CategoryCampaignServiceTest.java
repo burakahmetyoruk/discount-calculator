@@ -7,8 +7,8 @@ import com.burak.discount.model.builder.CategoryCampaignFactory;
 import com.burak.discount.model.campaign.CampaignData;
 import com.burak.discount.model.campaign.CategoryCampaignData;
 import com.burak.discount.repository.CategoryCampaignRepository;
+import com.burak.discount.service.campaign.CategoryCampaignService;
 import com.burak.discount.util.InputValidator;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -17,10 +17,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.Optional;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.*;
 
 /**
  * Created by byoruk on 12.04.2018.
@@ -39,7 +37,6 @@ public class CategoryCampaignServiceTest {
 
     @Mock
     private CategoryCampaignFactory categoryCampaignFactory;
-
 
     @Test
     public void should_save_category_campaign_successfully() throws InputValidationException {

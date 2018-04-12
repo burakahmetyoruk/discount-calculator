@@ -1,6 +1,5 @@
 package com.burak.discount.rest;
 
-import com.burak.discount.entity.Campaign;
 import com.burak.discount.exception.InputValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
