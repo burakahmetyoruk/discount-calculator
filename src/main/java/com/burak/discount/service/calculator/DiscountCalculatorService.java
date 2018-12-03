@@ -38,10 +38,10 @@ public class DiscountCalculatorService {
 
     }
 
-    protected Item calculateItemDiscount(Item item, Map<Long,Boolean> categoryDiscountMap) {
+    Item calculateItemDiscount(Item item, Map<Long,Boolean> categoryDiscountMap) {
         Long categoryId = item.getCategoryId();
         Long productId = item.getProductId();
-        BigDecimal discountAmount = BigDecimal.ZERO;
+        BigDecimal discountAmount;
         BigDecimal discountedAmount;
 
         discountAmount = productDiscountCalculatorService.calculateDiscount(item.getPrice(), productId);
@@ -55,5 +55,4 @@ public class DiscountCalculatorService {
         item.setDiscountedPrice(discountedAmount);
         return item;
     }
-
 }

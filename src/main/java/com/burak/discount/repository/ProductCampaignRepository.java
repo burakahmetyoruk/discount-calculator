@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ProductCampaignRepository extends CampaignRepository<ProductCampaign> {
-
     ProductCampaign findByProductId(Long prodcutId);
 }

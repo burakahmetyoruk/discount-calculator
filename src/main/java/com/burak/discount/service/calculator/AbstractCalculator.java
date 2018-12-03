@@ -15,7 +15,7 @@ public abstract class AbstractCalculator {
 
     private final CalculatorUtil calculatorUtil;
 
-    protected BigDecimal getDiscountAmount(BigDecimal price, Campaign campaign) {
+    BigDecimal getDiscountAmount(BigDecimal price, Campaign campaign) {
         BigDecimal discountAmount = BigDecimal.ZERO;
         if (campaign != null) {
             if (campaign.getDiscountType() == DiscountType.PRICE) {

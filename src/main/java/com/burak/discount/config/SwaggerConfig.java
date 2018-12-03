@@ -25,7 +25,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Baske Discount Calculator Application")
+                .title("Basket Discount Calculator Application")
                 .description("This is a simple shopping basket discount calculator app")
                 .termsOfServiceUrl("")
                 .license("Apache License Version 2.0")

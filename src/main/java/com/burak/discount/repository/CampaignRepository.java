@@ -9,5 +9,4 @@ import org.springframework.data.repository.NoRepositoryBean;
  */
 @NoRepositoryBean
 public interface CampaignRepository<T extends Campaign> extends CrudRepository<T,Long> {
-
 }

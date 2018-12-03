@@ -27,17 +27,13 @@ public class CategoryCampaignService extends CampaignService {
     }
 
     public Campaign saveOrUpdateCampaign(CampaignData campaignData) throws InputValidationException {
-
         validateInput(campaignData);
-
         CategoryCampaign campaign = categoryCampaignFactory.makeCampaign(campaignData);
-
         return categoryCampaignRepository.save(campaign);
     }
 
     public Campaign getCampaign(Long id) {
         Optional<CategoryCampaign> campaign = categoryCampaignRepository.findById(id);
-
         return campaign.orElse(null);
     }
 

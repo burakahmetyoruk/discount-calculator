@@ -10,13 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class InputValidator {
 
+    public static final int MAX_DISCOUNT = 100;
+
     public boolean isInputValid(CampaignData campaignData) {
-
         DiscountType discountType = campaignData.getDiscountType();
-
-        if (discountType == DiscountType.RATE) {
-            return campaignData.getMaxDiscountAmount() != null && campaignData.getDiscount() <= 100;
-        }
-        return true;
+        return discountType != DiscountType.RATE || campaignData.getMaxDiscountAmount() != null && campaignData.getDiscount() <= MAX_DISCOUNT;
     }
 }

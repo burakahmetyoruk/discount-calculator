@@ -20,7 +20,7 @@ public class CategoryDiscountCalculatorService extends AbstractCalculator {
         this.categoryCampaignRepository = categoryCampaignRepository;
     }
 
-    public BigDecimal calculateDiscount(BigDecimal price, Long categoryId) {
+    BigDecimal calculateDiscount(BigDecimal price, Long categoryId) {
         CategoryCampaign categoryCampaign = categoryCampaignRepository.findByCategoryId(categoryId);
         return getDiscountAmount(price, categoryCampaign);
     }

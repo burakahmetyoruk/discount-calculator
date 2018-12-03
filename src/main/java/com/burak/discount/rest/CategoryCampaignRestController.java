@@ -19,24 +19,21 @@ public class CategoryCampaignRestController {
 
     private final CategoryCampaignService categoryCampaignService;
 
-    @PutMapping(value = "/update/category-campaign")
+    @PutMapping(value = "/category-campaign")
     public ResponseEntity<Campaign> updateCategoryCampaign(@RequestBody @Valid CategoryCampaignData categoryCampaignData) throws InputValidationException {
         Campaign campaign = categoryCampaignService.saveOrUpdateCampaign(categoryCampaignData);
-
         return ResponseEntity.ok(campaign);
     }
 
-    @PostMapping(value = "/add/category-campaign")
+    @PostMapping(value = "/category-campaign")
     public ResponseEntity<Campaign> addCategoryCampaign(@RequestBody @Valid CategoryCampaignData categoryCampaign) throws InputValidationException {
         Campaign campaign =  categoryCampaignService.saveOrUpdateCampaign(categoryCampaign);
-
         return ResponseEntity.ok(campaign);
     }
 
-    @GetMapping(value = "/get/category-campaign/{id}")
+    @GetMapping(value = "/category-campaign/{id}")
     public ResponseEntity<Campaign> getCategoryCampaign(@PathVariable("id") Long id) {
         Campaign campaign = categoryCampaignService.getCampaign(id);
-
         return ResponseEntity.ok(campaign);
     }
 }

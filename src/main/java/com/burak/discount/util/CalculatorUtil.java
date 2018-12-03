@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Component
 public class CalculatorUtil {
 
-    public static final BigDecimal ONE_HUNDRED = new BigDecimal(100);
+    private static final BigDecimal ONE_HUNDRED = new BigDecimal(100);
 
     public  BigDecimal percentage(BigDecimal base, BigDecimal pct){
         return base.multiply(pct).divide(ONE_HUNDRED);

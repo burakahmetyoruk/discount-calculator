@@ -19,9 +19,8 @@ public class ProductCampaignRestController {
 
     private final ProductCampaignService productCampaignService;
 
-    @PostMapping(value = "/add/product-campaign")
+    @PostMapping(value = "/product-campaign")
     public ResponseEntity<Campaign> addProductCampaign(@RequestBody @Valid ProductCampaignData productCampaign) {
-
         try {
             Campaign campaign = productCampaignService.saveOrUpdateCampaign(productCampaign);
             return ResponseEntity.ok(campaign);
@@ -31,15 +30,13 @@ public class ProductCampaignRestController {
 
     }
 
-    @GetMapping(value = "/get/product-campaign/{id}")
+    @GetMapping(value = "/product-campaign/{id}")
     public ResponseEntity<Campaign> getProductCampaign(@PathVariable("id") Long id) {
             Campaign campaign = productCampaignService.getCampaign(id);
-
             return ResponseEntity.ok(campaign);
-
     }
 
-    @PutMapping(value = "/update/product-campaign")
+    @PutMapping(value = "/product-campaign")
     public ResponseEntity<Campaign> updateProductCampaign(@RequestBody @Valid ProductCampaignData productCampaignData) {
         try {
             Campaign campaign = productCampaignService.saveOrUpdateCampaign(productCampaignData);
@@ -47,11 +44,9 @@ public class ProductCampaignRestController {
         } catch (InputValidationException e) {
             return ResponseEntity.badRequest().build();
         }
-
     }
 
     @DeleteMapping(value = "/delete")
     public void deleteCampaign() {
-
     }
 }

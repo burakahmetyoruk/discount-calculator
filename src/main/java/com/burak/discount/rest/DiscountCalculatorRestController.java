@@ -21,9 +21,7 @@ public class DiscountCalculatorRestController {
 
     @PostMapping(value = "/calculate-discount")
     public ResponseEntity<BasketData> calculateDiscount(@RequestBody @Valid BasketData basketData) {
-
         BasketData result = discountCalculatorService.calculateDiscount(basketData);
-
         return ResponseEntity.ok(result);
     }
 }

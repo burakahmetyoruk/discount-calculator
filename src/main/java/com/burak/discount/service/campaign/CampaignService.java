@@ -9,11 +9,11 @@ import lombok.RequiredArgsConstructor;
  * Created by byoruk on 12.04.2018.
  */
 @RequiredArgsConstructor
-public abstract class CampaignService {
+abstract class CampaignService {
 
     private final InputValidator inputValidator;
 
-    protected void validateInput(CampaignData campaignData) throws InputValidationException {
+    void validateInput(CampaignData campaignData) throws InputValidationException {
         if (!inputValidator.isInputValid(campaignData)) {
             throw new InputValidationException("Input Not Valid For Rate Campaign!");
         }
